@@ -1,17 +1,19 @@
 <template>
   <v-app>
+    <Bar/>
       <HelloWorld/>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+import Bar from '@/components/Bar';
+import HelloWorld from '@/components/HelloWorld';
 
 export default {
   name: 'App',
 
   components: {
-    HelloWorld,
+    HelloWorld, Bar
   },
 
   data: () => ({

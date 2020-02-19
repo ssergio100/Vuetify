@@ -4,6 +4,7 @@
         <v-app-bar absolute color="#fcb69f" dark src="https://picsum.photos/1920/1080?random"
             scroll-target="#scrolling-techniques-2">
             <div class="hidden-md-and-up">
+                <!-- <v-app-bar-nav-icon></v-app-bar-nav-icon> -->
                 <v-menu bottom right>
                     <template v-slot:activator="{ on }">
                         <v-btn dark icon v-on="on">
@@ -21,7 +22,9 @@
             </div>
 
 
-            <v-toolbar-title>Page title</v-toolbar-title>
+            <v-toolbar-title>
+                  <img class="mr-3" :src="require('../../public/img/logo.png')" height="40"/>
+            </v-toolbar-title>
 
             <v-spacer></v-spacer>
 
@@ -34,32 +37,29 @@
             </v-btn>
         </v-app-bar>
 
-        <v-content style="padding-top:200px">
-            <v-container class="fill-height" fluid>
-                <v-row align="center" justify="center">
-                    <Card />
-                    <Card />
-                    <Card />
-                </v-row>
-                <v-row align="center" justify="center">
-                    <Card />
-                    <Card />
-                    <Card />
-                </v-row>
-            </v-container>
-        </v-content>
+        <v-content style="padding-top:100px">
+  <v-row>
+      
  
+            <Card />
+            <Card />
+            <Card /><Card /><Card /><Card />
+ </v-row>
+        </v-content>
+
     </div>
 </template>
 
 <script>
-  import Card from "@/components/Card.vue"
+    import Card from "@/components/Card.vue"
     export default {
         name: "HelloWorld",
         props: {
             msg: String
         },
-        components:{ Card },
+        components: {
+            Card
+        },
         data: () => {
             return {
                 menu: [{
